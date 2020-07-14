@@ -6,11 +6,6 @@ const btn = document.getElementById('button');
 
 const phone = document.getElementById('phone');
 
-
-// xhr.onerror = function() {
-//   alert("Запрос не удался");
-// };
-
 var one = false;
 var two = false;
 var thee = false;
@@ -50,12 +45,13 @@ function checkInputs() {
     var usernameValue = username.value.trim();
     var emailValue = email.value.trim();
     var phoneValue = phone.value.trim();
+
     //Проверка на валитность ФИО
 	if(usernameValue === '') {
-        setErrorFor(username, 'ФИО введино не правильно');
+        setErrorFor(username, 'ФИО введино неправильно');
         one = false;
 	} else if(!isFullName(usernameValue)) {
-        setErrorFor(username,"ФИО введино не правильно");
+        setErrorFor(username,"ФИО введино неправильно");
         one = false;
 	}else{
         setSuccessFor(username);
@@ -63,10 +59,10 @@ function checkInputs() {
     }
 	//Проверка на валитность email
 	if(emailValue === '') {
-        setErrorFor(email, 'Не правильный email');
+        setErrorFor(email, 'Неправильный email');
         two = false;
 	} else if (!isEmail(emailValue)) {
-        setErrorFor(email, 'Не правильный email');
+        setErrorFor(email, 'Неправильный email');
         two = false;
 	} else {
         setSuccessFor(email);
@@ -77,7 +73,7 @@ function checkInputs() {
         setErrorFor(phone, 'Строчка пустая');
         thee = false;
     }else if(!isPhone(phoneValue)){
-        setErrorFor(phone,"Телефон введен не верно");
+        setErrorFor(phone,"Телефон введен неверно");
         thee = false;
     }else{
         setSuccessFor(phone);
@@ -117,15 +113,15 @@ const isFullName = username => {
 // Асинхронная отправка анных через formData 
 //
 
-const formElem = async (e) => {
-    e.preventDefault();
+// const formElem = async (e) => {
+//     e.preventDefault();
 
-    let response = await fetch('/article/formdata/post/user', {
-      method: 'POST',
-      body: new FormData(formElem)
-    });
+//     let response = await fetch('/article/formdata/post/user', {
+//       method: 'POST',
+//       body: new FormData(formElem)
+//     });
 
-    let result = await response.json();
+//     let result = await response.json();
 
-    alert(result.message);
-  };
+//     alert(result.message);
+//   };

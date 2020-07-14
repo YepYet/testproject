@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Тестовое задание</title>
+  </head>
+  <body>
+    <div class="container">
+	<div class="header">
+		<h2>Проверка валитности</h2>
+	</div>
+	<form id="form" class="form" id="formElem" method="post" enctype="multipart/form-data">
+		<div class="form-control">
+			<label for="username">ФИО</label>
+			<input type="text" placeholder="Иванов Иван Иванович" id="username" />
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<label for="username">Email</label>
+			<input type="email" placeholder="****@gmail.com" id="email" />
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<label for="username">Телефон</label>
+			<input type="phone" placeholder="+79994445566" id="phone"/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		
+		<button id="button">Отправить</button>
+	</form>
+</div>
+
+
+   <script src = "script.js"></script>
+  </body>
+</html>

@@ -109,9 +109,7 @@ const isFullName = username => {
 
 
 
-//
-// Асинхронная отправка анных через formData 
-//
+
 // const delay = ms => {
 //     return new Promise(r => setTimeout(() => r(), ms))
 // }

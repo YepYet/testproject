@@ -112,16 +112,23 @@ const isFullName = username => {
 //
 // Асинхронная отправка анных через formData 
 //
+// const delay = ms => {
+//     return new Promise(r => setTimeout(() => r(), ms))
+// }
 
-// const formElem = async (e) => {
-//     e.preventDefault();
+// const url = 'https://jsonplaceholder.typicode.com/todos'
 
-//     let response = await fetch('/article/formdata/post/user', {
-//       method: 'POST',
-//       body: new FormData(formElem)
-//     });
 
-//     let result = await response.json();
+// const FeatcTotools = () => {
+//     console.log("Start")
+//     return delay(2000)
+//     .then(()=>{
+//         return fetch(url)
+//     })
+//     .then(response => response.json())
+// }
 
-//     alert(result.message);
-//   };
+// FeatcTotools().then(data => {
+//     console.log("Data: " + data)
+// })
+// .catch(e => console.error(e))

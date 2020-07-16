@@ -110,23 +110,10 @@ const isFullName = username => {
 
 
 
-// const delay = ms => {
-//     return new Promise(r => setTimeout(() => r(), ms))
-// }
-
-// const url = 'https://jsonplaceholder.typicode.com/todos'
-
-
-// const FeatcTotools = () => {
-//     console.log("Start")
-//     return delay(2000)
-//     .then(()=>{
-//         return fetch(url)
-//     })
-//     .then(response => response.json())
-// }
-
-// FeatcTotools().then(data => {
-//     console.log("Data: " + data)
-// })
-// .catch(e => console.error(e))
+async function featchAsync(){
+    console.log("Start");
+    await delay(2000);
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log('Data: ', data);
+}
